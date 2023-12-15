@@ -1,0 +1,12 @@
+@startuml
+class Component {}
+class Decorator {}
+class ConcreteComponent {}
+
+
+Component <|-- ConcreteComponent
+Component <|-- Decorator
+
+Decorator "many" *-- "1" Component: contains
+
+@enduml
