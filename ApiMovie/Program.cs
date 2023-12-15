@@ -1,6 +1,8 @@
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<MovieContext>();
 
 // Add services to the container.
+SeedData.Init();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
